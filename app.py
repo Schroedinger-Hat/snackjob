@@ -12,10 +12,12 @@ experience_list = [
     'Space',
     'Part-Time',
     'Professional',
+    'Ex',
 ]
 
 position_list = [
     'Beverage',
+    'Freelance',
     'Overlord',
     'Animal',
     'Head of',
@@ -24,7 +26,7 @@ position_list = [
     'Director of',
     'Retail',
     'Alchemist',
-    'Rock star',
+    'Rockstar',
     'Manager',
     'Mentor',
     'Chief',
@@ -38,6 +40,8 @@ position_list = [
     'Psychologist',
     'Santa Claus',
     'Ambassador of',
+    'In Charge of',
+    'Hero',
 ]
 
 tech_list = [
@@ -48,6 +52,7 @@ tech_list = [
     'Snuggler',
     'Sleeper',
     'Ninja',
+    'Potatoes',
 ]
 
 reinforcement_list = [
@@ -62,7 +67,8 @@ reinforcement_list = [
     'Evangelist',
     'Specialist',
     'Consultant',
-    'to the Bone',
+    'Inventor',
+    'Division',
     '“Show me the Money!”',
 ]
 
