@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "way"
+name = "Snack Job"
 version = "0.1.0"
-description = "what job position do you hold"
+description = "Generate snack job position"
 authors = ["Schrodinger Hat <us@schrodinger-hat.it>"]
 license = "MIT"
 

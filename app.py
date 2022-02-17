@@ -1,51 +1,103 @@
-from flask import Flask
+from flask import Flask, request, json
 import random
 
 app = Flask(__name__)
 
-d = {
-    'experience': [ 'junior', 'mid', 'intermediate', 'senior', 'expert' ],
-    'name': [ 'Developer', 'Devops', 'Data Scientist'],
-    'tech': [ 'Machine Learning', 'Java', 'Python', 'Ruby', 'UX', 'UI' ]
+experience_list = {
+    'Junior': 0,
+    'Mid': 0,
+    'Intermediate': 0,
+    'Senior': 0,
 }
 
-@app.route('/way', methods=['GET'])
-def way():
-    return get_random_job2(3)
-    #return get_random_job1()
+position_list = {
+    'Digital': 40,
+    'Tech lead': 50,
+    'Devops': 60,
+    'Developer': 60,
+    'Frontend Developer': 60,
+    'Web Developer': 60,
+    'Backend Developer': 60,
+    'Data Scientist': 60,
+    'Software Engineer': 60,
+    'Founder': 70,
+    'Co-Founder': 70,
+    'Manager': 70,
+    'CEO': 80,
+    'CTO': 80,
+    'Head of': 80,
+    'Business Solution': 80,
+    'Manager': 80,
+    'Staff Engineer': 80,
+    'Mentor': 80,
+    'Life Coach': 80,
+    'Google Developer': 80,
+    'Microsoft MVP': 90,
+}
 
-def get_random_job1():
+tech_list = {
+    'Machine Learning': 20,
+    'UX': 20,
+    'UI': 20,
+    'Marketing': 20,
+    'Communication': 20,
+    'Java': 30,
+    'Python': 30,
+    'Ruby': 30,
+}
+
+reinforcement_list = {
+    'Expert': 5,
+    'Creative': 5,
+    'International': 5,
+}
+
+
+@app.route('/api/v1/snackjob', methods=['POST'])
+def snackjob():
+    job = request.form.get('job')
+    print(job)
+    return {
+            "snack_job": get_snack_job(len(job.split())),
+        }
+
+def get_snack_job(section_number=3):
+
+    total_power = 0
+    snack_job = ""
+
+    # exp
     random.seed()
-    tmp = ""
-    for i in range(random.randint(1, 4)):
+    experience = random.choice(list(experience_list.keys()))
+    total_power += experience_list[experience]
+    snack_job += experience
+
+    # position
+    while total_power < 50:
         random.seed()
-        tech_or_name = bool(random.getrandbits(1))
-        if tech_or_name:
-            tech = random.choice(d['tech'])
-            while tech in tmp:
-                random.seed()
-                tech = random.choice(d['tech'])
-            tmp += tech + ' '
-        else:
-            name = random.choice(d['name'])
-            while name in tmp:
-                random.seed()
-                name = random.choice(d['name'])
-            tmp += name + ' '
-    return random.choice(d['experience']) + ' ' + tmp
+        position = random.choice(list(position_list.keys()))
+        total_power += position_list[position]
+        snack_job += ' ' + position
+    if len(snack_job.split()) >= section_number:
+        return snack_job
 
-def get_random_job2(number_words=3):
-    random.seed()
-    tmp = ""
-    done = False
-    tech_name = [1,1]
-
-    for i in range(number_words):
+    # tech
+    while total_power < 90:
         random.seed()
-        total_word = tech_name[0] + tech_name[1]
-        choice_element = random.getrandbits(1) - tech_name[0] / total_word + tech_name[1] / total_word
-        tech_name[int(choice_element)] += 1
+        tech = random.choice(list(tech_list.keys()))
+        total_power += tech_list[tech]
+        snack_job += ' ' + tech
+    if len(snack_job.split()) >= section_number:
+        return snack_job
 
-        tmp = tech_name
+    # reinforcementes
+    while total_power <= 100:
+        random.seed()
+        reinforcement = random.choice(list(reinforcement_list.keys()))
+        total_power += reinforcement_list[reinforcement]
+        snack_job += ' ' + reinforcement
+    if len(snack_job.split()) >= section_number:
+        return snack_job
 
-    return str(tmp)
+    return snack_job
+
