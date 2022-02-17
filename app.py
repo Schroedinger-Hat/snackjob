@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 d = {
     'experience': [ 'junior', 'mid', 'intermediate', 'senior', 'expert' ],
-    'name': [ 'UX', 'UI', 'Developer', 'Devops', ''],
-    'tech': [ 'Machine Learning', 'UI', 'Developer', 'Devops' ]
+    'name': [ 'Developer', 'Devops', 'Data Scientist'],
+    'tech': [ 'Machine Learning', 'Java', 'Python', 'Ruby', 'UX', 'UI' ]
 }
 
 @app.route('/way', methods=['GET'])
@@ -18,13 +18,17 @@ def get_random_job():
     tmp = ""
     for i in range(random.randint(1, 4)):
         random.seed()
-        tmp2 = random.choice(d['name'])
-        while tmp2 in tmp:
-            random.seed()
-            tmp2 = random.choice(d['name'])
-        tmp3 = random.choice(d['tech'])
-        while tmp3 in tmp:
-            random.seed()
-            tmp2 = random.choice(d['tech'])
-        tmp += tmp3 + ' '
+        tech_or_name = bool(random.getrandbits(1))
+        if tech_or_name:
+            tech = random.choice(d['tech'])
+            while tech in tmp:
+                random.seed()
+                tech = random.choice(d['tech'])
+            tmp += tech + ' '
+        else:
+            name = random.choice(d['name'])
+            while name in tmp:
+                random.seed()
+                name = random.choice(d['name'])
+            tmp += name + ' '
     return random.choice(d['experience']) + ' ' + tmp
