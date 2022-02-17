@@ -11,9 +11,10 @@ d = {
 
 @app.route('/way', methods=['GET'])
 def way():
-    return get_random_job()
+    return get_random_job2(3)
+    #return get_random_job1()
 
-def get_random_job():
+def get_random_job1():
     random.seed()
     tmp = ""
     for i in range(random.randint(1, 4)):
@@ -32,3 +33,19 @@ def get_random_job():
                 name = random.choice(d['name'])
             tmp += name + ' '
     return random.choice(d['experience']) + ' ' + tmp
+
+def get_random_job2(number_words=3):
+    random.seed()
+    tmp = ""
+    done = False
+    tech_name = [1,1]
+
+    for i in range(number_words):
+        random.seed()
+        total_word = tech_name[0] + tech_name[1]
+        choice_element = random.getrandbits(1) - tech_name[0] / total_word + tech_name[1] / total_word
+        tech_name[int(choice_element)] += 1
+
+        tmp = tech_name
+
+    return str(tmp)
