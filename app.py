@@ -8,7 +8,6 @@ experience_list = [
     'Senior',
     'Twisted',
     'Digital',
-    'Space',
     'Part-Time',
     'Professional',
     'Ex',
@@ -59,20 +58,18 @@ reinforcement_list = [
     'Lover',
     'Expert',
     'Optimizer',
-    'Creative',
-    'International',
     'Demi-God',
     'Funambolist',
     'Evangelist',
     'Specialist',
-    'Consultant',
-    'Inventor',
     'Division',
-    '“Show me the Money!”',
 ]
 
 society_list = [
-    'Google',
+    'Mordor srl',
+    'Hogwarts spa',
+    'ECorp',
+    'Dreams snc',
 ]
 
 @app.route('/api/v1/snackjob', methods=['GET'])
@@ -107,6 +104,7 @@ def get_snack_job():
         random.seed()
         snack_job += random.choice(reinforcement_list) + ' '
 
+    random.seed()
     snack_job += '@ ' + random.choice(society_list)
 
     return snack_job
