@@ -3,7 +3,6 @@ import random
 
 app = Flask(__name__)
 
-
 experience_list = [
     'Junior',
     'Senior',
@@ -72,6 +71,9 @@ reinforcement_list = [
     '“Show me the Money!”',
 ]
 
+society_list = [
+    'Google',
+]
 
 @app.route('/api/v1/snackjob', methods=['GET'])
 def snackjob():
@@ -105,5 +107,7 @@ def get_snack_job():
         random.seed()
         snack_job += random.choice(reinforcement_list) + ' '
 
-    return snack_job.rstrip()
+    snack_job += '@ ' + random.choice(society_list)
+
+    return snack_job
 
