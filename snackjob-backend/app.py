@@ -1,111 +1,14 @@
 from flask import Flask, request, json
-import random
+from utils.snackjob import get_snack_job
 
 app = Flask(__name__)
 
-experience_list = [
-    'Junior',
-    'Senior',
-    'Twisted',
-    'Digital',
-    'Part-Time',
-    'Professional',
-    'Ex',
-]
-
-position_list = [
-    'Beverage',
-    'Freelance',
-    'Overlord',
-    'Animal',
-    'Head of',
-    'Wizard',
-    'Problem Wrangler',
-    'Director of',
-    'Retail',
-    'Alchemist',
-    'Rockstar',
-    'Manager',
-    'Mentor',
-    'Chief',
-    'Life Coach',
-    'Executive Manager of',
-    'Collector of',
-    'Co-Founder of',
-    'Manager',
-    'Officer',
-    'Travel Agent',
-    'Psychologist',
-    'Santa Claus',
-    'Ambassador of',
-    'In Charge of',
-    'Hero',
-]
-
-tech_list = [
-    'Dissemination',
-    'Warrior',
-    'Jedi',
-    'Space',
-    'Snuggler',
-    'Sleeper',
-    'Ninja',
-    'Potatoes',
-]
-
-reinforcement_list = [
-    'Destroyer',
-    'Lover',
-    'Expert',
-    'Optimizer',
-    'Demi-God',
-    'Funambolist',
-    'Evangelist',
-    'Specialist',
-    'Division',
-]
-
-society_list = [
-    'Mordor srl',
-    'Hogwarts spa',
-    'ECorp',
-    'Dreams snc',
-]
-
-@app.route('/api/v1/snackjob', methods=['GET'])
+@app.route('/api/v1/snackjob', methods=['POST'])
 def snackjob():
+    name = request.form.get('name')
+    total_words = len(list(filter(lambda element: element == ' ', list(name)))) + 1
+    total_power_of_name = list(map(ord, list(filter(lambda element: element != ' ', list(name)))))
     return {
-            "snack_job": get_snack_job(),
+            "snack_job": get_snack_job([total_words, total_power_of_name]),
         }
-
-def get_snack_job():
-
-    snack_job = ""
-
-    # exp
-    random.seed()
-    snack_job += random.choice(experience_list) + ' '
-
-    # position
-    random.seed()
-    snack_job += random.choice(position_list) + ' '
-
-    # tech
-    random.seed()
-    tech = ''
-    while True:
-        tech = random.choice(tech_list)
-        if tech not in snack_job:
-            break
-    snack_job += tech + ' '
-
-    # reinforcementes
-    if bool(random.getrandbits(1)):
-        random.seed()
-        snack_job += random.choice(reinforcement_list) + ' '
-
-    random.seed()
-    snack_job += '@ ' + random.choice(society_list)
-
-    return snack_job
 
