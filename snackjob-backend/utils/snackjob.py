@@ -1,8 +1,8 @@
-from utils.experiences import experience_list
-from utils.positions import position_list
-from utils.reinforcement import reinforcement_list
-from utils.society import society_list
-from utils.tech import tech_list
+from utils.dict.experiences import experience_list
+from utils.dict.positions import position_list
+from utils.dict.reinforcement import reinforcement_list
+from utils.dict.society import society_list
+from utils.dict.tech import tech_list
 
 def get_snack_job(power_stats):
 
