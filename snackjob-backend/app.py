@@ -17,7 +17,6 @@ def snackjob():
         rValue = r.get(md5)
         if (rValue == None):
             return { 'error': 'No hash found' }
-        redisEntry = json.loads(rValue)
     elif (name == '' or name == None or title == None or title == ''):
         return {'error': 'You need to specify title and name'}
     else:
@@ -28,8 +27,8 @@ def snackjob():
     if (rValue != None):
         jobObj = json.loads(rValue)
     else:
-        total_words = len(list(filter(lambda element: element == ' ', list(name)))) + 1
-        total_power_of_name = list(map(ord, list(filter(lambda element: element != ' ', list(title)))))
+        total_words = len(list(filter(lambda element: element == ' ', list(name + title)))) + 1
+        total_power_of_name = list(map(ord, list(filter(lambda element: element != ' ', list(name + title)))))
 
         jobObj = {
             "snack_job": get_snack_job([total_words, total_power_of_name]),
