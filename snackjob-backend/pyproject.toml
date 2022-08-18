@@ -8,6 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.8"
 Flask = "^2.0.3"
+redis = "^4.3.4"
 
 [tool.poetry.dev-dependencies]
 

@@ -6,5 +6,9 @@ experience_list = [
     'Part-Time',
     'Professional',
     'Ex',
+    'Experencied',
+    'Influencer',
+    'Intern',
+    'Ninja'
 ]
 

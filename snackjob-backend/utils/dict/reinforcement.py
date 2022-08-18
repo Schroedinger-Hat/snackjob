@@ -1,3 +1,6 @@
+from re import M
+
+
 reinforcement_list = [
     'Destroyer',
     'Lover',
@@ -8,4 +11,14 @@ reinforcement_list = [
     'Evangelist',
     'Specialist',
     'Division',
+    'Motivator',
+    'Super',
+    'Crazy frog',
+    'Memetor',
+    'Leader',
+    'Joker',
+    'Guru',
+    'Twitteretor',
+    'Genius',
+    'Enthusiast',
 ]
