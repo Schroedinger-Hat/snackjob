@@ -31,6 +31,8 @@ def snackjob():
         total_power_of_name = list(map(ord, list(filter(lambda element: element != ' ', list(name + title)))))
 
         jobObj = {
+            "name": name,
+            "title": title,
             "snack_job": get_snack_job([total_words, total_power_of_name]),
             "md5": md5
         }
