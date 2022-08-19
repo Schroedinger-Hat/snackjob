@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -14,3 +14,5 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.cls-1{fill:#f6f6f6;}.cls-2{fill:#931004;}.cls-3{fill:#c00d0d;}.cls-4{fill:#db0812;}.cls-5{font-size:10px;fill:#9f1f21;letter-spacing:0.1em;}.cls-15,.cls-5,.cls-6{font-family:'Roboto', sans-serif}.cls-6{font-size:12px;fill:#1d1d1b;}.cls-7{letter-spacing:0em;}.cls-8{letter-spacing:0em;}.cls-9{letter-spacing:0em;}.cls-10{letter-spacing:0em;}.cls-11{letter-spacing:-0.01em;}.cls-12{letter-spacing:-0.01em;}.cls-13{letter-spacing:0em;}.cls-14{letter-spacing:-0.01em;}.cls-15{font-size:28px;fill:#5c5c5c;}.cls-16{letter-spacing:-0.04em;}.cls-17{letter-spacing:0em;}
