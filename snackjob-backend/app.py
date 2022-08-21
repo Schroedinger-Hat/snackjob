@@ -1,13 +1,17 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
 from utils.snackjob import get_snack_job
 import hashlib
 import redis
 import os, json
 
 app = Flask(__name__)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
 r = redis.Redis(host=os.environ.get('REDIS_HOST'), port=os.environ.get('REDIS_PORT'), username='default', decode_responses=True, password=os.environ.get('REDIS_PWD'), db='0')
 
 @app.route('/api/v1/snackjob', methods=['GET'])
+@cross_origin()
 def snackjob():
     name = request.args.get('name')
     title = request.args.get('title')
