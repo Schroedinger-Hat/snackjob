@@ -85,10 +85,10 @@ export default function Snackjob() {
             <Head>
                 <title>{job.name} | {job.title}</title>
                 <meta name="description" content="Snackjob is a job title generator for any kind of business, positions and domains. Don't be afraid to be the one that is leading the trend" />
-                <meta property="og:title" content={`${job.name} | ${job.title}`} />
+                <meta property="og:title" content="Snackjob - The job title generator" />
                 <meta property="og:url" content="https://jobs.schrodinger-hat.it/" />
                 <meta property="og:description" content="Snackjob is a job title generator for any kind of business, positions and domains." />
-                <meta name="twitter:title" content={`${job.name} | ${job.title}`} />
+                <meta name="twitter:title" content="Snackjob - The job title generator" />
                 <meta name="twitter:description" content="Snackjob is a job title generator for any kind of business, positions and domains." />
             </Head>
             <Box px={8} py={5} mx="auto">
@@ -143,7 +143,7 @@ export default function Snackjob() {
                         alignItems="center"
                         as="a"
                         w={1/3}
-                        href={`http://twitter.com/share?text=I'm glad to share my new position: ${job.title}! Discover yours on snackjob by @schrodinger_hat and @thejoin95!&url=https://jobs.schrodinger-hat.it/snackjob/${id}`}
+                        href={`http://twitter.com/share?text=I'm glad to share my new position: ${job.title}! Discover yours on snackjob by @schrodinger_hat and @thejoin95!&url=https://jobs.schrodinger-hat.it/`}
                         target="_blank"
                         rel="noopener noreferrer"
                         bg="gray.50"
@@ -179,7 +179,7 @@ export default function Snackjob() {
                         }}
                         alignItems="center"
                         as="a"
-                        href={`https://www.facebook.com/sharer/sharer.php?u=https://jobs.schrodinger-hat.it/snackjob/${id}`}
+                        href={`https://www.facebook.com/sharer/sharer.php?u=https://jobs.schrodinger-hat.it/`}
                         target="_blank"
                         rel="noopener noreferrer"
                         bg="gray.50"
