@@ -143,7 +143,7 @@ export default function Snackjob() {
                         alignItems="center"
                         as="a"
                         w={1/3}
-                        href={`http://twitter.com/share?text=I'm glad to share my new position: ${job.title}! Discover yours on snackjob by @schrodinger_hat and @thejoin95!&url=${window.location.href}`}
+                        href={`http://twitter.com/share?text=I'm glad to share my new position: ${job.title}! Discover yours on snackjob by @schrodinger_hat and @thejoin95!&url=https://jobs.schrodinger-hat.it/snackjob/${id}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         bg="gray.50"
@@ -179,7 +179,7 @@ export default function Snackjob() {
                         }}
                         alignItems="center"
                         as="a"
-                        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+                        href={`https://www.facebook.com/sharer/sharer.php?u=https://jobs.schrodinger-hat.it/snackjob/${id}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         bg="gray.50"
