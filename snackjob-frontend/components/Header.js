@@ -4,7 +4,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { useViewportScroll } from 'framer-motion';
 
 export default function Header() {
-    const mobileNav = useDisclosure();
+  const mobileNav = useDisclosure();
   const { toggleColorMode: toggleMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(MoonIcon, SunIcon);
@@ -24,8 +24,7 @@ export default function Header() {
       }}
       alignItems="center"
       as="a"
-      aria-label="Sponsor Choc UI on Open Collective"
-      href={""}
+      href={"https://opencollective.com/schrodinger-hat"}
       target="_blank"
       rel="noopener noreferrer"
       bg="gray.50"
@@ -55,44 +54,8 @@ export default function Header() {
       </Box>
     </Box>
   );
-  const MobileNavContent = (
-    <VStack
-      pos="absolute"
-      top={0}
-      left={0}
-      right={0}
-      display={mobileNav.isOpen ? "flex" : "none"}
-      flexDirection="column"
-      p={2}
-      pb={4}
-      m={2}
-      bg={bg}
-      spacing={3}
-      rounded="sm"
-      shadow="sm"
-    >
-      <CloseButton
-        aria-label="Close menu"
-        justifySelf="self-start"
-        onClick={mobileNav.onClose}
-      />
-      <Button w="full" variant="ghost">
-        Dashboard
-      </Button>
-      <Button
-        w="full"
-        variant="solid"
-        colorScheme="brand"
-      >
-        Inbox
-      </Button>
-      <Button w="full" variant="ghost">
-        Videos
-      </Button>
-    </VStack>
-  );
   return (
-    <Box pos="relative">
+    <Box mt={5} pos="relative">
       <header
         ref={ref}
         shadow={y > height ? "sm" : undefined}
@@ -129,8 +92,7 @@ export default function Header() {
               >
                 <Link
                   isExternal
-                  aria-label="Go to Choc UI GitHub page"
-                  href="https://github.com/anubra266/choc-ui"
+                  href="https://github.com/Schrodinger-Hat/snackjob"
                 >
                   Github
                 </Link>
@@ -165,7 +127,6 @@ export default function Header() {
               />
             </Flex>
           </Flex>
-          {MobileNavContent}
         </div>
       </header>
     </Box>
