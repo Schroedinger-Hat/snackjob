@@ -133,7 +133,7 @@ export default function Home() {
           <Button
             as="a"
             onClick={(e) => createSnackjob(e)}
-            href={'#snackjob-form'}
+            href={'#'}
             variant="outline"
             display="inline-flex"
             alignItems="center"
