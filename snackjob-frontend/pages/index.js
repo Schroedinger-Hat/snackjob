@@ -110,7 +110,7 @@ export default function Home() {
           }}
         >
           Snackjob is a job title generator for any kind of business, positions and domains.
-          Don't be afraid to be the one that is leading the trend
+          Don&apos;t be afraid to be the one that is leading the trend
         </Text>
         <Stack
           direction={{
