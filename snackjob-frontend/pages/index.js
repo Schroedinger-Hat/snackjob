@@ -132,7 +132,7 @@ export default function Home() {
           <Input onChange={(e) => setFormValues((p) => { return { ...p, title: e.target.value }})} width={'sm'} placeholder='Your Current Job Title' />
           <Button
             as="a"
-            onClick={() => createSnackjob()}
+            onClick={(e) => createSnackjob(e)}
             href={'#snackjob-form'}
             variant="outline"
             display="inline-flex"
