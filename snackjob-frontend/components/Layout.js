@@ -23,6 +23,15 @@ export default function Layout({ children }) {
         <meta name="twitter:domain" content="jobs.schrodinger-hat" />
         <meta name="twitter:title" content="Snackjob - The job title generator" />
         <meta name="twitter:description" content="Snackjob is a job title generator for any kind of business, positions and domains." />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175469686-3"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-175469686-3');`}
+        </script>
+
       </Head>
       <Header />
       <main>{children}</main>

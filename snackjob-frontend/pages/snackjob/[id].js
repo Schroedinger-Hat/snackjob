@@ -135,7 +135,43 @@ export default function Snackjob() {
                             Snackjob
                         </Text>
                     </Text>
-                    <Stack mx={'auto'} my={5} width={'sm'} spacing={2} direction={'row'}>
+                    <Stack mx={'auto'} my={5} width={'lg'} spacing={3} direction={'row'}>
+                    <Box
+                        display={{
+                            md: "flex",
+                        }}
+                        alignItems="center"
+                        as="a"
+                        w={1/3}
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=https://jobs.schrodinger-hat.it/`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        bg="gray.50"
+                        borderWidth="1px"
+                        borderColor="gray.200"
+                        px="1em"
+                        minH="36px"
+                        rounded="md"
+                        fontSize="sm"
+                        color="gray.800"
+                        outline="0"
+                        transition="all 0.3s"
+                        _hover={{
+                            bg: "gray.100",
+                            borderColor: "gray.300",
+                        }}
+                        _active={{
+                            borderColor: "gray.200",
+                        }}
+                        _focus={{
+                            boxShadow: "outline",
+                        }}
+                        ml={5}
+                        >
+                        <Box as="strong" lineHeight="inherit" fontWeight="semibold">
+                            LinkedIn <ExternalLinkIcon verticalAlign={'text-top'} />
+                        </Box>
+                    </Box>
                     <Box
                         display={{
                             md: "flex",
