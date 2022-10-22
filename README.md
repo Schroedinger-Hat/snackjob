@@ -8,12 +8,12 @@ Available at [jobs.schrodinger-hat.it](https://jobs.schrodinger-hat.it/)
 
 # Backend API
 
-Available at https://snackjob.herokuapp.com or http://snackjob-api.schrodinger-hat.it
+Available at https://snackjob-api.schrodinger-hat.it
 
 You can test it out as follow:
 
 `
-curl -X POST http://snackjob-api.schrodinger-hat.it/api/v1/snackjob -d 'name=ciao'
+curl -X POST https://snackjob-api.schrodinger-hat.it/api/v1/snackjob -d 'name=ciao'
 `
 
 # Credits
