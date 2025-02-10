@@ -1,13 +1,14 @@
 [tool.poetry]
-name = "Snack Job"
+name = "snackjob-backend"
+package-mode = false
 version = "0.1.0"
 description = "Generate snack job position"
-authors = ["Schrodinger Hat <us@schrodinger-hat.it>"]
+authors = ["Schrodinger Hat <events@schroedinger-hat.org>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-Flask = "^2.0.3"
+Flask = "^3.0.0"
 redis = "^4.3.4"
 Flask-Cors = "^3.0.10"
 gunicorn = "^19.9.0"

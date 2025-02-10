@@ -8,7 +8,7 @@ import os, json
 app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-r = redis.Redis(host=os.environ.get('REDIS_HOST'), port=os.environ.get('REDIS_PORT'), username='default', decode_responses=True, password=os.environ.get('REDIS_PWD'), db='0')
+r = redis.Redis.from_url(os.environ.get('REDIS_URL'))
 
 @app.route('/api/v1/snackjob', methods=['GET'])
 @cross_origin()
