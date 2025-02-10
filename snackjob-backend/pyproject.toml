@@ -10,6 +10,7 @@ python = "^3.8"
 Flask = "^2.0.3"
 redis = "^4.3.4"
 Flask-Cors = "^3.0.10"
+gunicorn = "^19.9.0"
 
 [tool.poetry.dev-dependencies]
 
