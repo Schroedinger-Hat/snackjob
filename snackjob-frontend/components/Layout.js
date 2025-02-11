@@ -14,8 +14,8 @@ export default function Layout({ children }) {
         <meta name="description" content="Snackjob is a job title generator for any kind of business, positions and domains. Don't be afraid to be the one that is leading the trend" />
         <meta property="og:title" content="Snackjob - The job title generator" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://jobs.schrodinger-hat.it/" />
-        <meta property="og:site_name" content="jobs.schrodinger-hat.it" />
+        <meta property="og:url" content="https://jobs.schroedinger-hat.org/" />
+        <meta property="og:site_name" content="jobs.schroedinger-hat.org" />
         <meta property="og:description" content="Snackjob is a job title generator for any kind of business, positions and domains." />
         <meta name="twitter:widgets:csp" content="on" />
         <meta name="twitter:card" content="summary" />

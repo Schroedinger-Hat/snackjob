@@ -1,19 +1,19 @@
 # Snack Jobs
 
-Do you have already a snack job? Check out here: https://jobs.schrodinger-hat.it/
+Do you have already a snack job? Check out here: https://jobs.schroedinger-hat.org/
 
 # Website
 
-Available at [jobs.schrodinger-hat.it](https://jobs.schrodinger-hat.it/)
+Available at [jobs.schroedinger-hat.org](https://jobs.schroedinger-hat.org/)
 
 # Backend API
 
-Available at https://snackjob-api.schrodinger-hat.it
+Available at https://snackjob-api.schroedinger-hat.org
 
 You can test it out as follow:
 
 `
-curl -X POST https://snackjob-api.schrodinger-hat.it/api/v1/snackjob -d 'name=ciao'
+curl https://snackjob-api.schroedinger-hat.org/api/v1/snackjob?name=ciao
 `
 
 # Credits

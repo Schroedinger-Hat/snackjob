@@ -10,7 +10,7 @@ export default function Home() {
   const createSnackjob = (e) => {
     e.preventDefault()
     if (formValues.name !== '' && formValues.title !== '') {
-      fetch(`https://snackjob-api.schrodinger-hat.it/api/v1/snackjob?name=${encodeURIComponent(formValues.name)}&title=${encodeURIComponent(formValues.title)}`)
+      fetch(`https://snackjob-api.schroedinger-hat.org/api/v1/snackjob?name=${encodeURIComponent(formValues.name)}&title=${encodeURIComponent(formValues.title)}`)
         .then((r) => r.json().then((j) => {
             window.location.href = `/snackjob/${j.md5}`
         }))

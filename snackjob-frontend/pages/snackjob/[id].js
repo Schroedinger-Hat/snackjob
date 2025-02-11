@@ -71,7 +71,7 @@ export default function Snackjob() {
     useEffect(() => {
         document.querySelector('#bsvg').setAttribute('width', document.querySelector('#bsvg').parentNode.offsetWidth)
         document.querySelector('#bsvg').setAttribute('height', document.querySelector('#bsvg').parentNode.offsetHeight)
-        fetch(`https://snackjob-api.schrodinger-hat.it/api/v1/snackjob?md5=${id}`)
+        fetch(`https://snackjob-api.schroedinger-hat.org/api/v1/snackjob?md5=${id}`)
             .then((r) => r.json().then((j) => {
                 setJob({
                     name: j.name,
@@ -88,7 +88,7 @@ export default function Snackjob() {
                 <title>{job.name} | {job.title}</title>
                 <meta name="description" content="Snackjob is a job title generator for any kind of business, positions and domains. Don't be afraid to be the one that is leading the trend" />
                 <meta property="og:title" content="Snackjob - The job title generator" />
-                <meta property="og:url" content="https://jobs.schrodinger-hat.it/" />
+                <meta property="og:url" content="https://jobs.schroedinger-hat.org/" />
                 <meta property="og:description" content="Snackjob is a job title generator for any kind of business, positions and domains." />
                 <meta name="twitter:title" content="Snackjob - The job title generator" />
                 <meta name="twitter:description" content="Snackjob is a job title generator for any kind of business, positions and domains." />
@@ -145,7 +145,7 @@ export default function Snackjob() {
                         alignItems="center"
                         as="a"
                         w={1/3}
-                        href={`https://www.linkedin.com/sharing/share-offsite/?url=https://jobs.schrodinger-hat.it/`}
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=https://jobs.schroedinger-hat.org/`}
                         target="_blank"
                         rel="noopener noreferrer"
                         bg="gray.50"
@@ -181,7 +181,7 @@ export default function Snackjob() {
                         alignItems="center"
                         as="a"
                         w={1/3}
-                        href={`http://twitter.com/share?text=I'm glad to share my new position: ${job.title}! Discover yours on snackjob by @schrodinger_hat and @thejoin95!&url=https://jobs.schrodinger-hat.it/`}
+                        href={`http://twitter.com/share?text=I'm glad to share my new position: ${job.title}! Discover yours on snackjob by @schrodinger_hat and @thejoin95!&url=https://jobs.schroedinger-hat.org/`}
                         target="_blank"
                         rel="noopener noreferrer"
                         bg="gray.50"
@@ -217,7 +217,7 @@ export default function Snackjob() {
                         }}
                         alignItems="center"
                         as="a"
-                        href={`https://www.facebook.com/sharer/sharer.php?u=https://jobs.schrodinger-hat.it/`}
+                        href={`https://www.facebook.com/sharer/sharer.php?u=https://jobs.schroedinger-hat.org/`}
                         target="_blank"
                         rel="noopener noreferrer"
                         bg="gray.50"
